@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    --background-color: #8c11be;
+    --color-anime: #c7500c;
+    --color-science: #5d2cbe;
+    --color-tecnologia: #4c4a4a;
+    --color-ciencias: #4b25e3;
+    --color-filmes: #c7120c; 
+    --color-finanças: #4ca224;
+    --color-games: #004158;
+    --color-moda: #704a34;
+    --color-musica:     #d90b53;
+    --color-noticias: #066d96;
+    --color-saúde: #798605;
+    --color-politica: #381e1e;
+}
+button{
+    border:none!important;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
