@@ -5,7 +5,7 @@ import {AiFillFire, AiOutlineFire} from "react-icons/ai";
 import {FaSnowflake} from "react-icons/fa";
 
 export default function PageContainer(props){
-    const {category, title, img, description} = props;
+    const {category, title, img, description, link} = props;
     const [hot, setHot] = useState(false);
     const [cold, setCold] = useState(false);
 
@@ -20,13 +20,17 @@ export default function PageContainer(props){
         }
     }
 
+    function redirect(){
+        window.open(link, "_blank");
+    }
+
     return (
         <>
-        <style.PageContainer>
+        <style.PageContainer >
             <style.Top category={category}>  
                 <style.Title>{category.toUpperCase()}</style.Title> 
             </style.Top>
-            <style.Content>
+            <style.Content onClick={()=>{redirect()}}>
                 <img src={img} alt={title} />
                 <style.TextContent>
                     <style.TextTitle>{title}</style.TextTitle>

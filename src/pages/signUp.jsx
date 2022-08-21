@@ -13,21 +13,21 @@ export default function SignUp(){
     const {user: userContext, setUser: setUserContext} = useContext(AppContext);
     const navigate = useNavigate();
 
-    function register(e){
+    async function register(e){
         e.preventDefault();
         setDisable(true);
-        api.signup(user.name, user.email, user.password)
-        .then(res => {
+        try{
+        const res = await api.signup(user.name, user.email, user.password)
             setDisable(false);
-            setUserContext(res.data);
-            console.log(userContext);
-            // window.location.href = '/';
-            navigate('/');
-        }).catch(err => {
+            // setUserContext(res.data);
+            const token = res.data;
+            sessionStorage.setItem('token', JSON.stringify(token));
+            console.log("resposta",res);
+            navigate('/categories');
+        }catch(err) {
             setDisable(false);
-            console.log(err);
+            alert(err.response.data);
         }
-        );
     }
     return(
         <>

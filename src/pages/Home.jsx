@@ -26,8 +26,9 @@ export default function Home(){
         <Header page={'news'}/>
         {categories.map(category => {
             const news =  organizeNews(dataNews[category]);
+
             return (
-                <PageContainer key={category} category={category} title={news.title} img={news.image} description ={news.description}/>
+                <PageContainer key={category} category={category} title={news.title} img={news.image} description ={news.description} link={news.url}/>
             )
         })}
         </>

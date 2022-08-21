@@ -71,14 +71,15 @@ export const TextContent = styled.div`
     z-index: 1;
     top: 0;
     left: 0;
-    padding-top: 30%;
+    padding-top: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 2px;
+    /* background-color: red; */
+    margin-bottom: 25px;
     &:hover {
         color: #fff;
-        padding-top: 20%;
+        padding-top: 35%;
     }
     
 `;
@@ -88,6 +89,7 @@ export const TextTitle = styled.p`
     max-width:100%;
     height: 100%;
     max-height:100%;
+    position: absolute;
     font-family: 'Oswald', sans-serif;
     font-size: 38px;
     font-weight: bold;
@@ -117,6 +119,8 @@ export const TextDescription = styled.p`
     padding-top: 30%;
     overflow: hidden;
     text-overflow: ellipsis;
+    position: absolute;
+    margin-bottom: 25px;
     &:hover {
         color: #fff;
         text-shadow: 0px 0px 5px black;
